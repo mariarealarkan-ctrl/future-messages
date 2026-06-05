@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>رسائل من المستقبل</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>🔮 رسائل من المستقبل</h1>
+    <p class="subtitle">احصل على رسالة شخصية من المستقبل</p>
+    
+    <form id="futureForm">
+      <div class="form-group">
+        <input 
+          type="text" 
+          id="name" 
+          placeholder="الاسم" 
+          required
+          maxlength="50"
+        >
+      </div>
+      
+      <div class="form-group">
+        <input 
+          type="number" 
+          id="age" 
+          placeholder="العمر" 
+          required
+          min="1"
+          max="150"
+        >
+      </div>
+      
+      <div class="form-group">
+        <input 
+          type="text" 
+          id="country" 
+          placeholder="البلد" 
+          required
+          maxlength="50"
+        >
+      </div>
+      
+      <button type="submit" id="submitBtn">احصل على رسالتك 📬</button>
+    </form>
+
+    <div id="loading" class="loading hidden">
+      <div class="spinner"></div>
+      <p>جاري إنشاء رسالتك...</p>
+    </div>
+
+    <div id="message" class="message hidden"></div>
+
+    <div id="error" class="error hidden"></div>
+
+    <button id="payButton" class="pay-button hidden">
+      💳 ادفع دولار واحد للحصول على نسخة خاصة
+    </button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
